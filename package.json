@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-eventos",
+  "version": "1.0.0",
+  "description": "API REST para una Plataforma de Eventos e Inscripciones",
+  "main": "src/server.js",
+   "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "thiago ormeño",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
