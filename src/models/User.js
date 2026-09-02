@@ -2,16 +2,18 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    firstName: {
+    first_name: {
       type: String,
       required: true,
       trim: true
     },
-    lastName: {
+
+    last_name: {
       type: String,
       required: true,
       trim: true
     },
+
     email: {
       type: String,
       required: true,
@@ -19,9 +21,16 @@ const userSchema = new mongoose.Schema(
       trim: true,
       lowercase: true
     },
+
     password: {
       type: String,
       required: true
+    },
+
+    role: {
+      type: String,
+      enum: ["user", "organizer", "admin"],
+      default: "user"
     }
   },
   {
