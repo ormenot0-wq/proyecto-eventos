@@ -1,12 +1,13 @@
-
 import { Router } from "express";
-
 import { SessionsController } from "../controllers/sessions.controller.js";
+import { auth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
 router.post("/register", SessionsController.register);
 router.post("/login", SessionsController.login);
 
-export default router;
+router.get("/current", auth, SessionsController.current);
+router.post("/logout", SessionsController.logout);
 
+export default router;
